@@ -1,5 +1,6 @@
 @import './block/aside';
 @import './block/main';
+@import './block/registration';
 
 *, body{
     padding: 0;
@@ -12,4 +13,9 @@
     display: block;
     margin: 0 auto;
     width: 75%;
+}
+
+button, input {
+    outline: none;
+    border: none;
 }

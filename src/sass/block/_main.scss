@@ -14,5 +14,28 @@
         height: 79px;
         padding: 12px;
         background: rgba(75, 75, 75, 0.90);
+        display: flex;
+        align-items: center;
+        padding-left: 10%;
+        &-input{
+            width: 400px;
+            height: 40px;
+            display: flex;
+            column-gap: 15px;
+            align-items: center;  
+            position: relative;
+            .search{
+                position: absolute;
+
+            }  
+            &_input{
+                width: 90%;
+                height: 100%;
+                background-color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: 0 10px;
+            }
+        }
     }
 }

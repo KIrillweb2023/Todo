@@ -1,0 +1,83 @@
+.registration {
+    padding: 51px 0 0 0;
+    height: auto;
+    &__block {
+        &_title {
+            color: #4B4B4B;
+            font-size: 32px;
+            font-weight: 400;
+            letter-spacing: 2.32px;
+        }
+        &_dey {
+            display: flex;
+            justify-content: space-between;
+            width: 19%;
+            color: #4B4B4B;
+            font-size: 15px;
+            font-weight: 400;
+            margin-top: 6px;
+            &span {
+                font-size: 15px;
+            }
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        &_wrapper {
+            &_image {
+                &-block {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    // fill: rgba(217, 217, 217, 0.60);
+                    // mix-blend-mode: hard-light;
+                    background-color: rgba(217, 217, 217, 0.6)
+                }
+            }
+        }
+        &_form {
+            display: flex;
+            flex-direction: column;
+            &-int {
+                width: 273px;
+                height: 35px;
+                border-radius: 3px;
+                border: 1px solid #CCC;
+                background: #FFF;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                outline: none;
+                margin-bottom: 8px;
+                // text-overflow: clip;
+                padding-left: 30px;
+                &::placeholder {
+                    position: relative;
+                    right: -1px;
+                }
+            }
+            &-submit {
+                width: 273px;
+                height: 35px;
+                background: #FFA4A4;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                color: #FFF;
+                text-align: center;
+                font-size:  15px;
+                font-weight: 500;
+                cursor: pointer;
+                border: none;
+                outline: none;
+            }
+            &-image {
+                position: relative;
+                top: -33px;
+                left: 6px;
+                width: 12px;
+                height: 12px;
+                object-fit: cover;
+            }
+        }
+    }
+}
