@@ -1,0 +1,18 @@
+.main{
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 80%;
+    height: 100vh;
+    background: url('../../img/main/main 1.jpg') center (center / cover) no-repeat;
+    .background{
+        width: 100%;
+        height: 100vh;
+        background: #ffffffaf;
+    }
+    &__header{
+        height: 79px;
+        padding: 12px;
+        background: rgba(75, 75, 75, 0.90);
+    }
+}
