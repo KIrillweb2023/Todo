@@ -195,8 +195,54 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        height: 55px;
+        height: 60px;
         background-color: #4b4b4b;
         padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .input{
+            width: 80%;
+            height: auto;
+            position: relative;
+            .adding_image{
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+            }
+            .smile{
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+        }
+        &-input{
+            width: 100%;
+            padding: 13px 53px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        &-btn{
+            width: 18%;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #5B7FFF 0%, rgba(139, 165, 255, 0.70) 100%);
+            padding: 13px 13px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 500;
+            &:hover{
+                background: linear-gradient(50deg, #5B7FFF 0%, rgba(139, 165, 255, 0.90) 100%);
+            }
+        }
     }
 }

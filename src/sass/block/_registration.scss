@@ -2,6 +2,12 @@
     padding: 51px 0 0 0;
     height: auto;
     &__block {
+        &_divider {
+            width: 80%;
+            height: 1.5px;
+            background: #4B4B4B;
+            margin-top: 27px;
+        }
         &_title {
             color: #4B4B4B;
             font-size: 32px;
@@ -27,6 +33,7 @@
         width: 70%;
         &_wrapper {
             &_image {
+                margin-top: 18px;
                 &-block {
                     width: 200px;
                     height: 200px;
@@ -38,9 +45,23 @@
                 }
             }
         }
+        &_img_svg {
+            display: block;
+            margin: 0 auto; 
+            padding-top: 77px;
+        }
+        &_text {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: bold;
+            color: #000;
+            margin-top: 15px;
+            text-align: center;
+        }
         &_form {
             display: flex;
             flex-direction: column;
+            margin-top: 34px;
             &-int {
                 width: 273px;
                 height: 35px;

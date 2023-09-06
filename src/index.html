@@ -10,7 +10,7 @@
 </head>
 <body>
     <aside class="aside">
-        <div class="aside__header">
+        <header class="aside__header">
             <div class="aside__header-logo">
                 <div class="aside__header-logo_img">
                     <img src="./icons/logo/logo.svg" alt="logo">
@@ -23,7 +23,7 @@
             <div class="aside__header-theme">
                 <img src="./icons/theme/sun-bright 1.svg" alt="sun">
             </div>
-        </div>
+        </header>
 
         <div class="aside__wrapper">
             <div class="aside__wrapper-item">
@@ -72,9 +72,10 @@
         </div>
     </aside>
 
+
     <section class="main">
         <div class="background">
-            <div class="main__header">
+            <header class="main__header">
                 <div class="main__header-input">
                     <input type="text" class="main__header-input_input" placeholder="Поиск">
                     <img src="./icons/main/search/magnifying-glass 1.svg" alt="search" class="search">
@@ -88,7 +89,7 @@
                     <span></span>
                     <span></span>
                 </div>
-            </div>
+            </header>
 
             <div class="main__tasking">
                 <div class="container">
@@ -135,8 +136,13 @@
                 </div>
             </div>
             <div class="main__add">
-                <input type="text" class="main__tasking-add-input">
-                <button class="main__tasking-add_btn"></button>
+                <div class="input">
+                    <input type="text" class="main__add-input" placeholder="Создать таск">
+                    <img src="./icons/add/add 1.svg" alt="" class="adding_image">
+                    <img src="./icons/add/smiley 1.svg" alt="" class="smile">
+                </div>
+               
+                <button class="main__add-btn">Добавить <img src="./icons/add/add (1) 1.svg" alt=""></button>
             </div>
         </div>
     </section>
