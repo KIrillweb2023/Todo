@@ -61,8 +61,11 @@
     }
     &__tasking{
         padding: 50px 0;
+        position: relative;
+        overflow: auto;
+        height: 83%;
         &-title{
-            color: #4B4B4B;
+            color: $main-color;
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
             font-size: 30px;
             font-weight: 400;
@@ -86,13 +89,13 @@
                 column-gap: 10px;
                 align-items: center;
                 .descr{
-                    color: #4B4B4B;
+                    color: $main-color;
                     font-size: 13px;
                     margin-top: 5px;
                     font-weight: 500;
                 }
                 .count{
-                    color: #4B4B4B;
+                    color: $main-color;
                     font-size: 13px;
                     margin-top: 5px;
                     font-weight: 500;
@@ -109,7 +112,7 @@
             width: 100%;
             display: block;
             height: 2px;
-            background-color: #4b4b4b;
+            background-color: $main-color;
             margin-top: 10px;
         }
 
@@ -123,15 +126,10 @@
                 align-items: center;
                 column-gap: 10px;
                 .tool__checkbox{
-                    width: 25px;
-                    background: none;
-                    height: 25px;
-                    border: 1px solid #4b4b4b;
-                    border-radius: 100%;
-                    cursor: pointer;
+                   @include checkbox-style;
                 }
                 &__descr{
-                    color: #4B4B4B;
+                    color: $main-color;
                     font-size: 14px;
                     font-weight: 500;
                 }
@@ -152,12 +150,7 @@
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
             &_checkbox{
-                width: 25px;
-                background: none;
-                height: 25px;
-                border: 1px solid #4b4b4b;
-                border-radius: 100%;
-                cursor: pointer;
+                @include checkbox-style;
             }
             &_delete{
                 cursor: pointer;
@@ -184,7 +177,7 @@
                 }
             }
             &_descr{
-                color: #4B4B4B;
+                color: $main-color;
                 font-size: 14px;
                 font-weight: 600;
             }
@@ -245,4 +238,5 @@
             }
         }
     }
+    
 }

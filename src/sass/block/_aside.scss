@@ -73,7 +73,7 @@
                 height: 25px;
                 width: 25px;
                 padding: 5px;
-                color: #4b4b4b;
+                color: $main-color;
                 border-radius: 100%;
                 background-color: #bebebe;
                 text-align: center;
@@ -90,7 +90,7 @@
                 }
             }
             &_title{
-                color: #4B4B4B;
+                color: $main-color;
                 text-align: center;
                 font-size: 15px;
                 font-weight: 500;
@@ -132,7 +132,7 @@
             }
             &_descr{
                 font-size: 14px;
-                color: #4b4b4b;
+                color: $main-color;
             }
         }
     }

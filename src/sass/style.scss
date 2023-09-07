@@ -1,6 +1,14 @@
+//mixins
+@import './mixins/checkbox';
+//variable
+@import './variables/variable';
+
 @import './block/aside';
 @import './block/main';
 @import './block/registration';
+
+
+
 
 *, body{
     padding: 0;
@@ -19,4 +27,6 @@ button, input {
     outline: none;
     border: none;
 }
-
+html{
+    scroll-behavior: smooth;
+}

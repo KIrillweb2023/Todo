@@ -1,0 +1,8 @@
+@mixin checkbox-style{
+    width: 25px;
+    background: none;
+    height: 25px;
+    border: 1px solid $main-color;
+    border-radius: 100%;
+    cursor: pointer;
+}
