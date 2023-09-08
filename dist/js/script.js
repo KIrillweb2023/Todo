@@ -1,48 +1,102 @@
-function taskHTML(checkbox, descr, rename, trash){
-    const element = document.createElement('div');
-    element.classList.add('main__tasking-task');
-    //помещаю верстку в элемент
-    element.innerHTML = `
-        <div class="${checkbox}"></div>
-        <h5 class="main__tasking-task_descr">${descr}</h5>
-        <div class="main__tasking-task_rename">
-            <img src="${rename}" alt="">
-        </div>
-        <div class="main__tasking-task_delete">
-            <img src="${trash}" alt="">
-        </div>
-    `;
-    //помещаем верстку в родителя элемента
-    const parent = document.querySelector('.main .main__tasking .container');
-    parent.append(element);
+//Создал класс Task
+class Task{
+    constructor(check, text, rename, basket, parent){
+        this.check = check;
+        this.text = text;
+        this.rename = rename;
+        this.basket = basket;
+        this.parent = document.querySelector(parent);
+    }
+    //Рендрю таск и затем поомещяю его в родителя 
+    render(){
+        const element = document.createElement('div');
+        element.classList.add('task');
+        element.innerHTML += `
+            <div class="${this.check}"></div>
+            <h5 class="descr">${this.text}</h5>
+            <img src="${this.rename}" alt="" class="rename">
+            <img src="${this.basket}" alt="" class="delete">
+        `;
+        this.parent.append(element);
+    }
 }
+
+const btn = document.querySelector('.main__add-btn');
+const input = document.querySelector('.main__add-input');
 
 const arr = [];
 let id = 0;
 
-const btn = document.querySelector('.main__add-btn');
+//Повесил обработчик на кнопку
 btn.addEventListener('click', () =>{
-    const input = document.querySelector('.main__add-input');
-   
     if(input.value.trim() != ""){
         arr.push({ id: id, text: input.value });
-        taskHTML('main__tasking-task_checkbox checkbox', `${input.value}`, './icons/task/pencil (1) 1.svg', './icons/task/recycle-bin 1.svg');
+        new Task('checkbox', `${input.value}`, './icons/task/pen.svg', './icons/task/recycle.svg', '.main .main__tasking .container').render();
+        const checkbox = document.querySelectorAll('.checkbox');
+        const task = document.querySelectorAll('.task');
+        const removeBtn = document.querySelectorAll('.delete');
+        activeClickCheckbox(task);
+        removeTask(removeBtn);
 
-        document.querySelectorAll('.main__tasking-task_delete').forEach((btn, i) =>{
-            btn.addEventListener('click', () =>{
-                btn.parentNode.remove();
-                arr.splice(i, 1);
-                console.log(arr);
+         //checkbox mode
+    function activeClickCheckbox(btn){
+        // btn.forEach(item =>{
+        //     item.addEventListener('click', () =>{
+        //         //item.classList.add('active');
+        //         if(item.classList.contains('active')){
+        //             item.classList.remove('active');
+        //         } else {
+        //             item.classList.add('active');
+        //         }
+        //     });
+        // });
+        
+        //через childNodes()
+        btn.forEach(item =>{
+            item.addEventListener('click', () =>{
+                const checkingClick = item.childNodes[1];
+                checkingClick.classList.toggle('active');
+                console.log(checkingClick);
             });
         });
-        document.querySelectorAll('.checkbox').forEach((btn, i) =>{
-            btn.addEventListener('click', () =>{
-                btn.classList.toggle('active');
-            });
-        });
-       
-    console.log(arr);
+    } 
     }
+    //checkbox mode
+    function activeClickCheckbox(btn){
+        // btn.forEach(item =>{
+        //     item.addEventListener('click', () =>{
+        //         //item.classList.add('active');
+        //         if(item.classList.contains('active')){
+        //             item.classList.remove('active');
+        //         } else {
+        //             item.classList.add('active');
+        //         }
+        //     });
+        // });
+        
+        btn.forEach(item =>{
+            item.addEventListener('click', () =>{
+                const checkingClick = item.childNodes[1];
+                checkingClick.classList.toggle('active');
+
+
+
+                console.log(checkingClick);
+            });
+        });
+    } 
+    //delete mode
+    function removeTask(btn){
+        btn.forEach((item, i) =>{
+            item.addEventListener('click', () =>{
+                item.parentNode.remove();
+                arr.splice(i, 1);
+            });
+        });
+    }
+
+
+
     input.value = "";
     id++;
 });
