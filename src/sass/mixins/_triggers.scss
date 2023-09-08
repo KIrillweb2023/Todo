@@ -1,0 +1,32 @@
+@mixin triggers-style{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    .tool__checkbox{
+        width: 25px;
+        background: none;
+        height: 25px;
+        border: 1px solid $main-color;
+        border-radius: 100%;
+        cursor: pointer;
+        position: relative;
+        transition: 0.3s all;
+        &.active-red{
+            background: #ce6b5e;
+            border: 2px solid #ce6b5e;
+            &::after{
+                content: '';
+                transition: 0.3s all;
+                position: absolute;
+                left: 8px;
+                top: 4px;
+                width: 5px;
+                height: 9px;
+                border: solid #fff;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+                display: block;
+            }
+        }
+    }
+}
