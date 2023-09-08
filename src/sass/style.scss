@@ -30,3 +30,33 @@ button, input {
 html{
     scroll-behavior: smooth;
 }
+.checkbox{
+    display: block;
+    width: 25px;
+    background: none;
+    height: 25px;
+    border: 1px solid $main-color;
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s all;
+    &.active{
+        background: #5E60CE;
+        border: 2px solid #5E60CE;
+        &::after{
+            content: "";
+            transition: 0.3s all;
+            position: absolute;
+            left: 8px;
+            top: 4px;
+            width: 5px;
+            height: 9px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+    }
+    
+}
+
+
