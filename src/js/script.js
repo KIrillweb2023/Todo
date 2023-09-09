@@ -1,3 +1,32 @@
+const form = document.querySelector('.main__add');
+
+
+function fetchQuery(form){
+    const formData = new FormData(form);
+    fetch('php/server.php', {
+        method: "POST", 
+        // headers: {
+        //     "Content-type": "application/json"
+        // },
+        body: formData
+    }).then(respons => respons.text())
+    .then(data => console.log(data))
+    .catch(() =>{
+        console.log('Error');
+    }).finally(() =>{
+        form.reset();
+    });
+}
+
+function submitBase(){
+    form.addEventListener('submit', (e) =>{
+        e.preventDefault();
+        fetchQuery(form);
+    });
+}
+submitBase();
+
+
 const btn = document.querySelector('.main__add-btn');
 const input = document.querySelector('.main__add-input');
 
@@ -20,7 +49,7 @@ btn.addEventListener('click', () =>{
         activeClickCheckbox(checkbox, descr, checkboxFull);
         removeTask(removeBtn, fullDelete);
     }
-    input.value = "";
+    //input.value = "";
     id++;
 });
 //Выделение элемента с помощью чекбокса
@@ -100,3 +129,6 @@ class Task{
         this.parent.prepend(element);
     }
 }
+
+// Отправка через fetch()
+

@@ -100,17 +100,17 @@
                 </div>
             </div>
         </div>
-        <div class="main__add">
+        <form action="php/server.php" method="post" class="main__add">
             <div class="input">
-                <input type="text" class="main__add-input" placeholder="Создать таск">
+                <input type="text" id="text" class="main__add-input" placeholder="Создать таск" name="text">
                 <img src="./icons/add/add-task.svg" alt="" class="add">
                 <img src="./icons/add/smile-task.svg" alt="" class="smile">
             </div>
-            <button class="main__add-btn"><span>Добавить</span> <img src="./icons/add/add-task-while.svg" alt=""></button>
-        </div>
+            <button type="submit" class="main__add-btn"><span>Добавить</span> <img src="./icons/add/add-task-while.svg" alt=""></button>
+        </form>
     </div>
 </section>
 
-    <script async src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
