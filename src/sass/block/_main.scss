@@ -30,6 +30,7 @@
                 top: 50%;
                 transform: translateY(-50%);
                 left: 5px;
+                width: 20px;
             }  
             &_input{
                 width: 90%;
@@ -174,7 +175,6 @@
                 color: $main-color;
                 font-size: 14px;
                 font-weight: 600;
-                width: 500px;
             }
         } 
     }
@@ -193,9 +193,10 @@
             width: 80%;
             height: auto;
             position: relative;
-            .adding_image{
+            .add{
                 position: absolute;
                 top: 50%;
+                width: 20px;
                 left: 15px;
                 transform: translateY(-50%);
             }
@@ -203,6 +204,7 @@
                 position: absolute;
                 top: 50%;
                 right: 15px;
+                width: 20px;
                 transform: translateY(-50%);
                 cursor: pointer;
             }
@@ -230,6 +232,9 @@
             font-weight: 500;
             &:hover{
                 background: linear-gradient(50deg, #5B7FFF 0%, rgba(139, 165, 255, 0.90) 100%);
+            }
+            img{
+                width: 24px;
             }
         }
     }

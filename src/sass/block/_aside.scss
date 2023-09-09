@@ -4,7 +4,7 @@
     left: 0;
     width: 20%;
     height: 100vh;
-    background-color: #ebebeb;
+    background-color: #f9f9f9;
     &__header{
         width: 100%;
         background-color: #404040;
@@ -84,7 +84,7 @@
             }
             &_img{
                 width: 40px;
-                height: 30px;
+                height: auto ;
                 img{
                     width: 100%;
                 }
